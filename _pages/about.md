@@ -55,3 +55,4 @@ I like DIY, and here are a few things I am proud of:
 -  I retro-engineered the local API of my connected speaker and created a python library for anybody to use, available on [github](https://github.com/N0ciple/pykefcontrol) and [PyPi](https://pypi.org/project/pykefcontrol/)
 -  I bypassed my ISP box to use my own router and create several VLANs to isolate IoT devices from trusted devices at home
 -  I run several useful services at home such as [Nextcloud](https://nextcloud.com/), [Home Assistant](https://www.home-assistant.io/), [AdGuard](https://github.com/AdguardTeam/AdGuardHome) or [Jellyfin](https://jellyfin.org/), all in docker containers
+-  I created a bot called [Turbodose](https://github.com/N0ciple/turbodose), which send notification on your smartphone when there is a free slot nearby to get vaccinated against Covid19
