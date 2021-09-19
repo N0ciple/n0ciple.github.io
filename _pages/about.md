@@ -41,7 +41,7 @@ In 2019 I started a PhD under the supervision of [Hichem Sahbi](http://www-ia.li
 
 **Weight Reparametrization for Budget-Aware Network Pruning** - ICIP 2021\
 _Robin Dupont, Hichem Sahbi, Guillaume Michel_ \
-[pdf](https://arxiv.org/abs/2107.03909) [slides](assets/pdf/dupont_slides_icip_2021.pdf) [video](https://youtu.be/mfny00pmC_0)
+[pdf](https://arxiv.org/abs/2107.03909)  [slides](assets/pdf/dupont_slides_icip_2021.pdf)  [poster](assets/pdf/dupont_poster_icip_2021.pdf)  [video](https://youtu.be/mfny00pmC_0)
 
 
 <br />
