@@ -29,7 +29,7 @@ At the Imperial College London, I realized my master thesis on the detection of 
 
 I worked at **Air France Operational Research** from 2018 to 2019, doing predictive maintenance on the A380 and A320 fleets.
 
-In 2019 I started a PhD under the supervision of [Hichem Sahbi](http://www-ia.lip6.fr/~sahbi/) at **Sorbonne University**, in the MLIA team of the LIP6. This PhD is realized in partnership with the **LIP6** and **Netatmo**, an enterprise designing smart and connected product for the house. My current researches focuses on neural network compression, pruning and sparsity in general.
+In 2019 I started a PhD under the supervision of [Hichem Sahbi](http://www-ia.lip6.fr/~sahbi/) at **Sorbonne University**, in the MLIA team of the LIP6. This PhD is realized in partnership with the **LIP6** and **Netatmo**, a company designing smart and connected products for the house. My current research focuses on neural network compression, pruning and sparsity in general.
 
 
 <br />
@@ -51,8 +51,8 @@ _Robin Dupont, Hichem Sahbi, Guillaume Michel_ \
 ## Miscellaneous
 
 I like DIY, and here are a few things I am proud of:
--  I built my own mechanical keyboard running the open source firmware [qmk](https://qmk.fm/), my own electric guitar and [magic mirror](https://magicmirror.builders/), among other things
+-  I built my own mechanical keyboard running the open-source firmware [qmk](https://qmk.fm/), my own electric guitar and [magic mirror](https://magicmirror.builders/), among other things
 -  I retro-engineered the local API of my connected speaker and created a python library for anybody to use, available on [github](https://github.com/N0ciple/pykefcontrol) and [PyPi](https://pypi.org/project/pykefcontrol/)
--  I bypassed my ISP box to use my own router and create several VLANs to isolate IoT devices from trusted devices at home
+-  I bypassed my ISP box to use my own router and setup several VLANs to isolate IoT devices from trusted devices at home
 -  I run several useful services at home such as [Nextcloud](https://nextcloud.com/), [Home Assistant](https://www.home-assistant.io/), [AdGuard](https://github.com/AdguardTeam/AdGuardHome) or [Jellyfin](https://jellyfin.org/), all in docker containers
--  I created a bot called [Turbodose](https://github.com/N0ciple/turbodose), which send notification on your smartphone when there is a free slot nearby to get vaccinated against Covid19
+-  I created a bot called [Turbodose](https://github.com/N0ciple/turbodose), which send notification on your smartphone when there is an available appointment nearby to get vaccinated (Covid19)
