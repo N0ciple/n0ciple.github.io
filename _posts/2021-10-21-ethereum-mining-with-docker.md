@@ -5,9 +5,9 @@ date: 2021-10-21 20:56 +0200
 ---
 # About Ethereum and Ethereum mining
 
-**Ethereum** is the second most popular cryptocurency by volume on the internet. One nice things about it that it has been concieved to be **ASICs-proof**. You can _in theory_ only mine ETH on a GPU or CPU. It is to say that you could help secure the blockchain and more importantly **earn a bit of ETH** from you computer !
+**Ethereum** is the second most popular cryptocurency by volume on the internet. One nice things about it that it has been concieved to be **ASICs-proof**. You can _in theory_ only mine ETH on a GPU or CPU. It is to say that you could help secure the blockchain and more importantly **earn a bit of ETH** from you computer, no need for an expensive and **noisy ASIC miner** !
 
-If you want to mine cryptocurency easily you can use premades binary (such as [T-Rex miner](https://trex-miner.com/)) or services (such as [NiceHash](https://www.nicehash.com/)). However bear in mind that most of these services take **a small fee**, generally arround **1%** of you hard-earned ETH. If you would rather keep these 1% for you or use **open source software**, this is possible thanks to [ethminer](https://github.com/ethereum-mining/ethminer)!
+If you want to mine cryptocurency easily you can use premades binary (such as [T-Rex miner](https://trex-miner.com/)) or services (such as [NiceHash](https://www.nicehash.com/)). However bear in mind that most of these binaries or services take **a small fee**, generally arround **1%** of you hard-earned ETH. If you would rather keep these 1% for you or use **open source software**, this is possible thanks to [ethminer](https://github.com/ethereum-mining/ethminer)!
 
 Ethminer is an opensource ethereum miner written in C++ and compatible with both AMD (through OpenCL) and Nvidia (through CUDA) GPUs. The latest release of ethminer is from **july 2019**, and are build against CUDA 9 at most. With **CUDA 9** you **will not** be able to run ethminer on the **most recents Nvida cards** (RTX 3000 series for example requires at least CUDA 11.1). Therefore you will need to **build ethminer yourself** if you want to use recent GPUs. This is far from impossible but a bit tidious since ethminer uses Hunter to fetch some dependancies. Hunter uses Bintray, which have been [sunseted](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) on the 1rst of May 2021.
 
@@ -15,7 +15,7 @@ To keep this simple the easiest way is to use ethminer is to use a **docker cont
 
 # Creating the Dockerfile
 
-In order to build our docker container we are going to write a `Dockerfile`  that will contain all the instruction to create the container. The instruction specific to ethminer can be found on the [`docs/BUILD.md`](https://github.com/ethereum-mining/ethminer/blob/master/docs/BUILD.md) file of the ethermine repo.
+In order to build our docker container we are going to write a `Dockerfile`  that will contain all the instruction to create the docker image. The original building instructions specific to ethminer can be found on the [`docs/BUILD.md`](https://github.com/ethereum-mining/ethminer/blob/master/docs/BUILD.md) file of the ethermine repo.
 
 In our Dockerfile, we first start by writing the following line that allows us to use a premade image from Nvidia containing the drivers as a base image, on top of which we will install the drivers. As you can see here our docker image will have the driver version `460.73.01`.
 
