@@ -73,8 +73,8 @@ panelbear_analytics: null # panelbear analytics site ID
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name:   # your blog must have a name for it to show up in the nav bar
-blog_description: These are not the blog posts you are looking for
+blog_name: Robin Dupont   # your blog must have a name for it to show up in the nav bar
+blog_description: About some stuff I like to tinker with.
 permalink: /blog/:year/:title/ 
 
 # Pagination
