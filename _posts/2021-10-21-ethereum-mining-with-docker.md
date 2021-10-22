@@ -5,34 +5,34 @@ date: 2021-10-21 20:56 +0200
 ---
 # About Ethereum and Ethereum mining
 
-**Ethereum** is the second most popular cryptocurency by volume on the internet. One nice things about it that it has been concieved to be **ASICs-proof**. You can _in theory_ only mine ETH on a GPU or CPU. It is to say that you could help secure the blockchain and more importantly **earn a bit of ETH** from you computer, no need for an expensive and **noisy ASIC miner** !
+**Ethereum** is the second most popular cryptocurrency by volume on the internet. One nice thing about it is that it has been conceived to be **ASICs-proof**. You can _in theory_, only mine ETH on a GPU or CPU. It is to say that you could help secure the blockchain and more importantly **earn a bit of ETH** from your computer. No need for an expensive and **noisy ASIC miner** !
 
-If you want to mine cryptocurency easily you can use premades binary (such as [T-Rex miner](https://trex-miner.com/)) or services (such as [NiceHash](https://www.nicehash.com/)). However bear in mind that most of these binaries or services take **a small fee**, generally arround **1%** of you hard-earned ETH. If you would rather keep these 1% for you or use **open source software**, this is possible thanks to [ethminer](https://github.com/ethereum-mining/ethminer)!
+If you want to mine cryptocurrency easily, you can use premade binaries (such as [T-Rex miner](https://trex-miner.com/)) or services (such as [NiceHash](https://www.nicehash.com/)). However, bear in mind that most of these binaries or services take **a small fee**, generally around **1%** of your hard-earned ETH. If you would rather keep this 1% for you or use **open-source software**, this is possible thanks to [ethminer](https://github.com/ethereum-mining/ethminer)!
 
-Ethminer is an opensource ethereum miner written in C++ and compatible with both AMD (through OpenCL) and Nvidia (through CUDA) GPUs. The latest release of ethminer is from **july 2019**, and are build against CUDA 9 at most. With **CUDA 9** you **will not** be able to run ethminer on the **most recents Nvida cards** (RTX 3000 series for example requires at least CUDA 11.1). Therefore you will need to **build ethminer yourself** if you want to use recent GPUs. This is far from impossible but a bit tidious since ethminer uses Hunter to fetch some dependancies. Hunter uses Bintray, which have been [sunseted](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) on the 1rst of May 2021.
+Ethminer is an open-source Ethereum miner written in C++ and compatible with both AMD (through OpenCL) and Nvidia (through CUDA) GPUs. The latest release of ethminer is from **july 2019**, and is built against CUDA 9 at best. With **CUDA 9** you **will not** be able to run ethminer on the **most recent Nvidia cards** (RTX 3000 series, for example, requires at least CUDA 11.1). Therefore you will need to **build ethminer yourself** if you want to use recent GPUs. This is far from impossible but a bit tedious since ethminer uses Hunter to fetch some dependencies. Hunter uses Bintray, which has been [sunseted](https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/) on the 1rst of May 2021.
 
-To keep this simple the easiest way is to use ethminer is to use a **docker container** that does all the hard work of building and runing ethminer for you. If you just want to use the docker image directly, jump to the [section](#running) about actually runnig ethminer. If you want some details about how to make the **Dockerfile** follow through the next section !
+To keep this simple, the easiest way to use ethminer is to use a **docker container** that does all the hard work of building and running ethminer for you. If you just want to use the Docker image directly, jump to the [section](#running) about actually running ethminer. If you want some details about how to make the **Dockerfile** follow through the next section!
 
 # Requirements
 
 For this project you will need to have :
 - A Linux machine with at least one Nvidia GPU.
-- Docker. Can be installed on linux with `curl https://get.docker.com | sh`
-- nvidia-docker. Can be installed on Debian based version of Linux with `sudo apt install nvidia-docker2`
-- The Nvidia drivers. Can be installed on Ubuntu with `sudo apt install nvidia-headless-470-server` if it was not already installed.
+- Docker. It can be installed on linux with `curl https://get.docker.com | sh`
+- nvidia-docker. It can be installed on Debian based version of Linux with `sudo apt install nvidia-docker2`
+- The Nvidia drivers. It can be installed on Ubuntu with `sudo apt install nvidia-headless-470-server` if it was not already installed.
 
 # Creating the Dockerfile
 
-First, let's create a directory to work in, I will call it `ethminer-docker`. In our folder we will first create a script to launch ethminer. Create a file `mining.sh` and write the following script:
+First, let us create a directory to work in, I will call it `ethminer-docker`. In our folder, we will first create a script to launch ethminer. Create a file `mining.sh` and write the following script:
 
 ```bash
 ethminer --HWMON 2 \  
          -P $MINING_ADDRESS \ 
          --api-bind 0.0.0.0:3333
 ```
-`--HWMON 2` Enable harware monitoring \
+`--HWMON 2` Enable hardware monitoring \
 `-P $MINING_ADDRESS` Uses an environment variable to store the pool address + wallet \
-`--api-bind 0.0.0.0:3333` Enable the API on port 3333. There is no need to change the port, since we can expose a different port to the host with docker.
+`--api-bind 0.0.0.0:3333` Enable the API on port 3333. There is no need to change the port, since we can expose a different port to the host with Docker.
 
 Your folder structure should now look like this:
 ```
@@ -40,21 +40,21 @@ ethminer-docker
 └── mining.sh
 ```
 
-Now, in order to build our docker container we are going to write a file called `Dockerfile` that will contain all the instruction to create the docker image. The original building instructions specific to ethminer can be found on the [`docs/BUILD.md`](https://github.com/ethereum-mining/ethminer/blob/master/docs/BUILD.md) file of the ethermine repo.
+Now, in order to build our Docker container, we are going to write a file called `Dockerfile`. This file will contain all the instruction to create the docker image. The original instructions specific to ethminer can be found on the [`docs/BUILD.md`](https://github.com/ethereum-mining/ethminer/blob/master/docs/BUILD.md) file of the ethermine repo.
 
-In our Dockerfile, we first start by writing the following line that allows us to use a premade image from Nvidia containing the drivers as a base image, on top of which we will install the drivers. As you can see here our docker image will have the driver version `460.73.01`.
+In our Dockerfile, we first start by writing the following line that allows us to use a premade image from Nvidia containing the drivers as a base image, on top of which we will install the drivers. As you can see here, our docker image will have the driver version `460.73.01`.
 
 ```Dockerfile
 FROM nvidia/driver:460.73.01-ubuntu20.04
 ```
 Then we update the sources and install the necessary dependencies to build ethminer.\
-The environment variable `DEBIAN_FRONTEND` is here to prevent `apt-get` from asking us questions since the installation process is supposed to be unatended. That is also why we add `-y` : to accept without further input from `apt-get`
+The environment variable `DEBIAN_FRONTEND` is here to prevent `apt-get` from asking us questions since the installation process is supposed to be unattended. That is also why we add `-y` : to accept without further input from `apt-get`
 ```Dockerfile
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install kmod git cmake perl gcc g++ wget --no-install-recommends -yq
 ```
 
-We fetch the cuda install script, run it and finaly delete it in the same `RUN` statement to prevent the addition of a lot of useless layer in the creation of the docker image. Here we download CUDA version `11.4.2`
+We fetch the CUDA install script, run it and finaly delete it in the same `RUN` statement. This prevents the addition of a lot of useless layer in the creation of the docker image. Here we download CUDA version `11.4.2`
 ```Dockerfile
 RUN wget --no-check-certificate https://developer.download.nvidia.com/compute/cuda/11.4.2/local_installers/cuda_11.4.2_470.57.02_linux.run && \
     sh cuda_11.4.2_470.57.02_linux.run --silent --toolkit --no-man-page --no-opengl-libs && \
