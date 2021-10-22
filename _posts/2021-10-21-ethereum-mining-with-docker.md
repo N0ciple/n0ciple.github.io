@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Ethereum mining with docker
+title: Custom Docker image for Ethereum mining
 date: 2021-10-21 20:56 +0200
 ---
-# About Ethereum and Ethereum mining
+## About Ethereum and Ethereum mining
 
 **Ethereum** is the second most popular cryptocurrency by volume on the internet. One nice thing about it is that it has been conceived to be **ASICs-proof**. You can _in theory_, only mine ETH on a GPU or CPU. It is to say that you could help secure the blockchain and more importantly **earn a bit of ETH** from your computer. No need for an expensive and **noisy ASIC miner** !
 
@@ -13,7 +13,7 @@ Ethminer is an open-source Ethereum miner written in C++ and compatible with bot
 
 To keep this simple, the easiest way to use ethminer is to use a **docker container** that does all the hard work of building and running ethminer for you. If you just want to use the Docker image directly, jump to the [section](#running) about actually running ethminer. If you want some details about how to make the **Dockerfile** follow through the next section!
 
-# Requirements
+## Requirements
 
 For this project you will need to have :
 - A Linux machine with at least one Nvidia GPU.
@@ -21,7 +21,7 @@ For this project you will need to have :
 - nvidia-docker. It can be installed on Debian based version of Linux with `sudo apt install nvidia-docker2`
 - The Nvidia drivers. It can be installed on Ubuntu with `sudo apt install nvidia-headless-470-server` if it was not already installed.
 
-# Creating the Dockerfile
+## Creating the Dockerfile
 
 First, let us create a directory to work in, I will call it `ethminer-docker`. In our folder, we will first create a script to launch ethminer. Create a file `mining.sh` and write the following script:
 
@@ -137,7 +137,7 @@ ethminer-docker
 └── mining.sh
 ```
 
-# Building our Docker image
+## Building our Docker image
 
 Once we have our Dockerfile, this is a rather **easy step**. Assuming that you are in a directory containing only your Dockerfile, run
 ```bash
@@ -151,7 +151,7 @@ REPOSITORY               TAG                     IMAGE ID       CREATED        S
 ethminer                 latest                  bcf676a57879   6 hours ago    7.15GB
 ```
 
-# Running ethminer on docker <a name="running"></a>
+## Running ethminer on docker <a name="running"></a>
 
 Before running ethminer, you need to **install `nvidia-docker`**. This is a **wrapper** that allows docker to **access your GPUs** ! To install it, run :
 ```bash
