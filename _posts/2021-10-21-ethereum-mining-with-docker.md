@@ -42,13 +42,13 @@ ethminer-docker
 
 Now, in order to build our Docker container, we are going to write a file called `Dockerfile`. This file will contain all the instruction to create the docker image. The original instructions specific to ethminer can be found on the [`docs/BUILD.md`](https://github.com/ethereum-mining/ethminer/blob/master/docs/BUILD.md) file of the ethermine repo.
 
-In our Dockerfile, we first start by writing the following line that allows us to use a premade image from Nvidia containing the drivers as a base image, on top of which we will install the drivers. As you can see here, our docker image will have the driver version `460.73.01`.
+In our Dockerfile, we first start by writing the following line that allows us to use a **premade image from Nvidia** containing the drivers as a **base image**, on top of which we will install the drivers. As you can see here, our docker image will have the driver version `460.73.01`.
 
 ```Dockerfile
 FROM nvidia/driver:460.73.01-ubuntu20.04
 ```
 Then we update the sources and install the necessary dependencies to build ethminer.\
-The environment variable `DEBIAN_FRONTEND` is here to prevent `apt-get` from asking us questions since the installation process is supposed to be unattended. That is also why we add `-y` : to accept without further input from `apt-get`
+The environment variable `DEBIAN_FRONTEND` is here to prevent `apt-get` from asking us questions since the installation process is supposed to be **unattended**. That is also why we add `-y` : to accept without further input from `apt-get`
 ```Dockerfile
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install kmod git cmake perl gcc g++ wget --no-install-recommends -yq
@@ -65,7 +65,7 @@ We change our working directory to `/`.
 WORKDIR "/"
 ```
 
-This big one-liner is responsible for cloning, configuring, building ethminer and finaly removing the useless files. This command is quite a big chunk so I will explained it in details. I used a big oneline once again to limit the number of layers generated.
+This big one-liner is responsible for cloning, configuring, building ethminer and finaly removing the useless files. This command is quite a big chunk so I will explained it in details. I used a big one-liner once again to **limit the number of layers generated**.
 ```Dockerfile
 RUN git clone https://github.com/ethereum-mining/ethminer.git -o ethminer && \
     cd /ethminer && \
@@ -79,9 +79,9 @@ RUN git clone https://github.com/ethereum-mining/ethminer.git -o ethminer && \
     make install && \
     cd / && rm -rf ethminer
 ```
-In this command we first clone the repo on a folder called `ethminer`. We then basically follow the building instruction from the ethminer repo, but before the configuring, we use a big `sed` command to edit the **Hunter configuration**. This is necessary since without this modification, Hunter is going to try to fetch Boost on Bintray and **fail**. Downloading manualy Boost is not going to work either, since the **hash does not correspond** to the one expected by Hunter, hence this modification with `sed`. More details [here](https://unix.stackexchange.com/questions/652841/boost-continually-fails-to-download-while-using-cmake-for-ethminer).\
-Once the modification of the Hunter `config.cmake` file is done, we generate the build configuration with 4 flags. `-DETHASHCL=OFF` **disable OpenCL**, since it is for AMD GPUs. However, ethminer is able to mine on both AMD and Nvidia GPUs at the same time. So if you want to mine Ethereum on such a hardware configuration, enable OpenCL with `-DETHASHCL=ON`. `-DAPICORE=ON` Enables the API (more details on that later). `-DETHASHCUDA=ON` makes sure **CUDA support is enabled**. And finally `-DBINKERN=OFF` prevent the installation of AMD binary kernels (once again, enable if you want to use AMD GPUs).\
-Once this is done we actually build ethminer, then install it (so that it is in our `$PATH`). and finally **delete the repo directory** as we do not need any of these files anymore.\
+In this command, we first clone the repo on a folder called `ethminer`. We then basically follow the building instruction from the ethminer repo. But before the configuring, we use a big `sed` command to edit the **Hunter configuration**. This is necessary since without this modification, Hunter is going to try to fetch Boost on Bintray and **fail**. Downloading manually Boost is not going to work either. The **hash does not correspond** to the one expected by Hunter, hence this modification with `sed`. More details [here](https://unix.stackexchange.com/questions/652841/boost-continually-fails-to-download-while-using-cmake-for-ethminer).\
+Once the modification of the Hunter `config.cmake` file is done, we generate the build configuration with 4 flags. `-DETHASHCL=OFF` **disable OpenCL**, since it is for AMD GPUs. However, ethminer can mine on both AMD and Nvidia GPUs at the same time. So if you want to mine Ethereum on such a hardware configuration, enable OpenCL with `-DETHASHCL=ON`. `-DAPICORE=ON` Enables the API (more details on that later). `-DETHASHCUDA=ON` makes sure **CUDA support is enabled**. And finally `-DBINKERN=OFF` prevent the installation of AMD binary kernels (once again, enable it if you want to use AMD GPUs).\
+Once this is done, we build ethminer, then install it (so that it is in our `$PATH`). and finally **delete the repo directory** as we do not need any of these files anymore.\
 
 Now we **expose port `3333`** (or any other port that you want to use, but make sure that this is the same port as the one in your `mining.sh` script) to access the API. The API is a **simple web page** with a few statistics such as the list of the GPUs, their temperature, fan speed and hash rate. This is helpful since we can **easily access all these informations** without having to look at the **docker logs**.
 ```Dockerfile
@@ -95,7 +95,7 @@ We need to copy our mining script in the `/` directory of you docker image.
 COPY mining.sh .
 ```
 
-Finally we have to **overrive** our base image entrypoint by adding a **new one**  which will **launch our mining script**!
+Finally, we have to **overrive** our base image entrypoint by adding a **new one**  which will **launch our mining script**!
 ```Dockerfile
 ENTRYPOINT [ "bash", "mining.sh" ]
 ```
@@ -139,13 +139,13 @@ ethminer-docker
 
 # Building our Docker image
 
-One we have our Dockerfile this is a rather **easy step**. Assuming that you are in a directory containing only you dockerfile, run
+Once we have our Dockerfile, this is a rather **easy step**. Assuming that you are in a directory containing only your Dockerfile, run
 ```bash
 docker build -t ethminer .
 ```
-⚠️ _Do not foget the dot at the end of the command (it means "the current directory") !_
+⚠️ _Do not forget the dot at the end of the command (it means "the current directory") !_
 
-You can change `ethermine` by what you want. It is the **name of your docker image**. You can confirm your docker image is on you system by running `docker image ls`. This should give something like this :
+You can change `ethermine` by what you want. It is the **name of your docker image**. You can confirm your docker image is on your system by running `docker image ls`. This should give something like this :
 ```bash
 REPOSITORY               TAG                     IMAGE ID       CREATED        SIZE
 ethminer                 latest                  bcf676a57879   6 hours ago    7.15GB
@@ -153,7 +153,7 @@ ethminer                 latest                  bcf676a57879   6 hours ago    7
 
 # Running ethminer on docker <a name="running"></a>
 
-before running ethminer you need to **install `nvidia-docker`**. This is a **wrapper** that allows docker to **access your GPUs** ! To install it, run :
+Before running ethminer, you need to **install `nvidia-docker`**. This is a **wrapper** that allows docker to **access your GPUs** ! To install it, run :
 ```bash
 sudo apt install nvidia-docker
 ```
@@ -163,7 +163,7 @@ docker run -p <port>:3333 -d -e MINING_ADDRESS=<your-mining-address> --name my_e
 ```
 ⚠️ _Replace_ `<port>` _by the port you want to use and_ `<your-mining-address>` _by the address of the pool, combined with your wallet. You can find more info about how to write the mining address [here](https://github.com/ethereum-mining/ethminer/blob/master/docs/POOL_EXAMPLES_ETH.md)_ 
 
-The `-p <port>:3333` option allows to acces the ethminer API on port `<port>` of the machine you are currenlty running it on if you are happy with port 333, you can simply use `-p 3333` instead. `--name my_ethminer` gives a friendly name to you container. The `-d` makes the docker container running in detached mode. If you want to see the logs run :
+The `-p <port>:3333` option allows to **acces the ethminer API** on port `<port>` of the machine you are currently running it on. If you are happy with port 3333, you can simply use `-p 3333` instead. `--name my_ethminer` gives a **friendly name** to your container. The `-d` makes the docker container run in **detached mode**. If you want to see the logs run :
 
 ```bash
 docker logs -f my_ethminer
@@ -193,6 +193,6 @@ cu 16:39:17 cuda-0   Generating DAG + Light(on GPU) : 4.57 GB
  m 16:39:20 ethminer 0:00 A0 0.00 h - cu0 0.00 62C 30% 188.24W, cu1 0.00 57C 49% 51.91W
 ```
 
-If it is the case, congratulation, you are now mining Ethereum on you computer thanks to Docker ! There was no need to install `kmod`, `git`, `cmake`, `perl`, etc... or even the CUDA Toolkit, everything was taken care of in the building of the docker image !
+If it is the case, **congratulation**! You are now mining Ethereum on your computer thanks to Docker! There was no need to install `kmod`, `git`, `cmake`, `perl`, etc... or even the CUDA Toolkit. Everything was done while building the docker image!
 
-If for whatever reason you want to stop the container, simply run `docker stop my_ethminer` and `docker start my_ethminer` to start it back.
+If you want to stop the container, simply run `docker stop my_ethminer` and `docker start my_ethminer` to start it back.
