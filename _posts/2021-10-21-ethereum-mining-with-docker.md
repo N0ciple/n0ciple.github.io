@@ -13,6 +13,14 @@ Ethminer is an opensource ethereum miner written in C++ and compatible with both
 
 To keep this simple the easiest way is to use ethminer is to use a **docker container** that does all the hard work of building and runing ethminer for you. If you just want to use the docker image directly, jump to the [section](#running) about actually runnig ethminer. If you want some details about how to make the **Dockerfile** follow through the next section !
 
+# Requirements
+
+For this project you will need to have :
+- A Linux machine with at least one Nvidia GPU.
+- Docker. Can be installed on linux with `curl https://get.docker.com | sh`
+- nvidia-docker. Can be installed on Debian based version of Linux with `sudo apt install nvidia-docker2`
+- The Nvidia drivers. Can be installed on Ubuntu with `sudo apt install nvidia-headless-470-server` if it was not already installed.
+
 # Creating the Dockerfile
 
 First, let's create a directory to work in, I will call it `ethminer-docker`. In our folder we will first create a script to launch ethminer. Create a file `mining.sh` and write the following script:
