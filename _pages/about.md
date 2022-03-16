@@ -37,7 +37,11 @@ In 2019 I started a PhD under the supervision of [Hichem Sahbi](http://www-ia.li
 <br />
 
 
-## Publication 
+## Publications 
+
+**Extracting Effective Subnetworks with Gumebel-Softmax** - arXiv preprint\
+_Robin Dupont, Mohammed Amine Alaoui, Hichem Sahbi, Alice Lebois_ \
+[pdf](https://arxiv.org/abs/2202.12986)
 
 **Weight Reparametrization for Budget-Aware Network Pruning** - ICIP 2021\
 _Robin Dupont, Hichem Sahbi, Guillaume Michel_ \
