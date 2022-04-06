@@ -88,7 +88,9 @@ Now we **expose port `3333`** (or any other port that you want to use, but make 
 EXPOSE 3333
 ```
 Example of the ethminer API :
-<img alt="Example of ethminer API" class="img-fluid rounded " src="{{ site.baseurl }}/assets/img/blog/ethminer_api_example.png" data-zoomable>
+
+{% include figure.html path="/assets/img/blog/ethminer_api_example.png" title="Example of ethminer API" alt=title class="img-fluid rounded z-depth-1" caption="Example of ethminer API dashboard." zoomable=true %}
+
 
 We need to copy our mining script in the `/` directory of you docker image.
 ```Dockerfile
