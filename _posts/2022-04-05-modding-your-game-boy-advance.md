@@ -23,7 +23,7 @@ Recently I wanted to play _Pokémon Fire Red_ 🔥 on original hardware, it is t
 As I told you, the main improvement point for the GBA is to **replace the screen** for a modern backlit LCD. However this is **not the only thing** you might want to change. Here is a list of all the parts I bought for my modding project. I ordered all my parts on [Retro Moding](https://www.retromodding.com/), although you can buy them on **various specialized websites** as well Aliexpress.
 
 ### Parts
-- [IPS LCD Screen](https://www.retromodding.com/collections/game-boy-advance/products/game-boy-advance-ips-lcd): There are various **LCD mod** for the GBA, such as retrofitting a AGS-101 (second GBA SP version) screen, or a **DSI lower screen**. However I went with the modern FunnyPlaying IPS LCD V2, which over **brightness control** provided that you solder a few wires (more on that later).
+- [IPS LCD Screen](https://www.retromodding.com/collections/game-boy-advance/products/game-boy-advance-ips-lcd): There are various **LCD mods** for the GBA, such as retrofitting a AGS-101 (second GBA SP version) screen, or a **DSi lower screen** (this mod is often called _ITA_ : DS<em>i</em> <em>t</em>o GB<em>A</em> ). However I went with the more modern FunnyPlaying IPS LCD V2, which supports **brightness control** provided that you solder a few wires (more on that later).
   
 - [New shell](https://www.retromodding.com/collections/game-boy-advance/products/funny-playing-game-boy-advance-shells-branded): I decided to buy a new shell for 3 reasons. First, because I bought a second-hand Game Boy Advance and although the shell was in pretty good condition, I vanted to have a _brand new shell_ feeling. Then because the LCD screen I bought necessitates some **cuts** in the original shell, and I wanted to **preserve it**. Fortunately FunnyPlaying also provides shell **specifically moulded** for their LCD. And finally, because there are a lot of color to choose from. So you can build yourself a **nice-looking GBA!**
   
@@ -58,7 +58,7 @@ First I started by fully dissasembling the original GBA. For this step you need 
     </div>
 </div>
 
-Although I did not take any pictures, I advise you to **test the screen** at this step. Simply put the **ribon cable** of the new screen in the connector located at the top of the motherboard, and power up your GBA, just to confirm the screen is turning on and showing the _Game Boy_ logo.
+Although I did not take any pictures of this step, I advise you to **test the screen** at this step. Simply put the **ribon cable** of the new screen in the connector located at the top of the motherboard, and power up your GBA, just to confirm the screen is turning on and showing the _Game Boy_ logo.
 
 #### Assembly
 
@@ -74,6 +74,8 @@ Once I confirmed the screen was ok, I soldered the three **tiny wires** that cam
 </div>
 
 I placed the screen in the case (**be gentle**, you do not want to break the LCD pannel) and **solder** the wires to the motherboard. I used the foam pad that came with the screen. I made a **small inscision** in the foam pad to let the wires through. Do not forget to put the **buttons** and the **silicon pads** as well !
+
+Depending on your motherboard revision, there are **two possible screen connector**. One with **32 pins** and one with **40 pins**. Mine was 40 pins, but if you have the 32 pins variant, just **bend the ribon cable** to expose the correct connector on the top of the screen.
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-7 mt-4 mt-md-0">
