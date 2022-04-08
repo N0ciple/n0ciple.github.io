@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Local API Retro Engineering
+title: 👨‍💻 Local API Retro Engineering
 date: 2022-03-16 22:30 +0100
 ---
 
