@@ -10,10 +10,10 @@ Recently I wanted to play _Pokémon Fire Red_ 🔥 on original hardware, it is t
 
 <div class="row justify-content-sm-center">
     <div class="col-sm-5 mt-3 mt-md-0">
-    {% include figure.html path="assets/img/blog/gba_modding/gba_modding_1.JPG" class="img-fluid rounded z-depth-1 img-responsive full-widt" zoomable=true caption="Original GBA" %}
+    {% include figure.html path="assets/img/blog/gba_modding/gba_modding_1.jpg" class="img-fluid rounded z-depth-1 img-responsive full-widt" zoomable=true caption="Original GBA" %}
     </div>
     <div class="col-sm-5 mt-3 mt-md-0">
-    {% include figure.html path="assets/img/blog/gba_modding/gba_modding_21.JPG" class="img-fluid rounded z-depth-1 img-responsive full-widt" zoomable=true caption="Modded GBA" %}
+    {% include figure.html path="assets/img/blog/gba_modding/gba_modding_21.jpg" class="img-fluid rounded z-depth-1 img-responsive full-widt" zoomable=true caption="Modded GBA" %}
     </div>
 </div>
 
@@ -46,7 +46,7 @@ First I started by fully dissasembling the original GBA. For this step you need 
     {% include figure.html path="assets/img/blog/gba_modding/gba_modding_9.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="View of all the parts" %}
     </div>
     <div class="col-sm mt-4 mt-md-0">
-    {% include figure.html path="assets/img/blog/gba_modding/gba_modding_6.JPG" class="img-fluid rounded z-depth-1" zoomable=true caption="GBA motherboard" %}
+    {% include figure.html path="assets/img/blog/gba_modding/gba_modding_6.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="GBA motherboard" %}
     </div>
 </div>
 <div class="row justify-content-sm-center">
@@ -54,7 +54,7 @@ First I started by fully dissasembling the original GBA. For this step you need 
     {% include figure.html path="assets/img/blog/gba_modding/gba_modding_7.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="Original GBA" %}
     </div>
     <div class="col-sm mt-4 mt-md-0">
-    {% include figure.html path="assets/img/blog/gba_modding/gba_modding_5.JPG" class="img-fluid rounded z-depth-1" zoomable=true caption="Close up of the motherboard" %}
+    {% include figure.html path="assets/img/blog/gba_modding/gba_modding_5.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="Close up of the motherboard" %}
     </div>
 </div>
 
@@ -66,7 +66,7 @@ Once I confirmed the screen was ok, I soldered the three **tiny wires** that cam
 <br/>
 <div class="row justify-content-sm-center">
     <div class="col-sm mt-4 mt-md-0">
-    {% include figure.html path="assets/img/blog/gba_modding/gba_modding_10.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="Close up of the " %}
+    {% include figure.html path="assets/img/blog/gba_modding/gba_modding_10.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="Close up of the soldered wires" %}
     </div>
     <div class="col-sm mt-4 mt-md-0">
     {% include figure.html path="assets/img/blog/gba_modding/gba_modding_11.jpg" class="img-fluid rounded z-depth-1" zoomable=true caption="Close up of the motherboard" %}

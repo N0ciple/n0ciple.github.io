@@ -9,5 +9,3 @@ _site
 Gemfile.lock
 vendor
 
-*.jpg
-*.JPG
