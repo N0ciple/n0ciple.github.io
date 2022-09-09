@@ -39,7 +39,7 @@ In 2019 I started a PhD under the supervision of [Hichem Sahbi](http://www-ia.li
 
 ## Publications 
 
-**Extracting Effective Subnetworks with Gumebel-Softmax** - arXiv preprint\
+**Extracting Effective Subnetworks with Gumebel-Softmax** - ICIP 2022\
 _Robin Dupont, Mohammed Amine Alaoui, Hichem Sahbi, Alice Lebois_ \
 [pdf](https://arxiv.org/abs/2202.12986) [slides](assets/pdf/dupont_slides_icip_2022.pdf) [poster](assets/pdf/dupont_poster_icip_2022.pdf) [video](https://youtu.be/8hwW-ijQnPI)
 
