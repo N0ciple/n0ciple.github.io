@@ -2,6 +2,7 @@
 layout: post
 title: 🛠️ Modding your Game Boy Advance
 date: 2022-04-05 22:15 +0200
+comments: true
 ---
 
 Recently I wanted to play _Pokémon Fire Red_ 🔥 on original hardware, it is to say a **Game Boy Advance** (GBA) and not an emulator of any kind. Since I had a GBA SP (AGS-001) as a kid, I wanted to play on a **standard** GBA for the sake of "novelty". However, the original GBA has a **reflective screen**. This type of screen does not emit its **own light** and needs an external light source (such as the sun for example). This makes the screen notoriously **difficult to see** since you need to orient it in a **certain angle** in order to see what it is displaying. More modern screen technologies include their own source of light. The first generation of GameBoy Advance SP (AGS-001) model features a **frontlit screen**. This is the same principle as the old reflective screen, except that light is emitted by a small **led strip** at the bottom of the screen. The latest GBA SP model (AGS-101) features a modern **backlit screen**, where the light source comes from **behind the pixels**. However, this GBA SP revision is rarer that the common AGS-001 frontlit model. In order to play in the best conditions but yet with original hardware, I will mod an original GBA to make a more **up-to-date handheld console**.

@@ -2,6 +2,7 @@
 layout: post
 title: 🐋 Custom Docker image for Ethereum mining
 date: 2021-10-21 20:56 +0200
+comments: true
 ---
 ## About Ethereum and Ethereum mining
 
