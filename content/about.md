@@ -2,16 +2,14 @@
 title: "About me"
 showDate: false
 showReadingTime: false
+layout: simple
 ---
-#
-##
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 I graduated from **École des Mines de Saint-Etienne** and **Imperial College London** in 2017. At the Imperial College London, I realized my master thesis on the detection of sources propagating rumours in social networks under the supervision of [Prof. Pier Luigi Dragotti](https://www.imperial.ac.uk/people/p.dragotti).
 
 I worked at **Air France Operational Research** from 2018 to 2019, doing predictive maintenance on the A380 and A320 fleets.
 
 In december 2023 I defended my PhD, supervised by [Hichem Sahbi](http://www-ia.lip6.fr/~sahbi/) at **Sorbonne University**, in the MLIA and then SYEL team of the LIP6. This PhD is realized in partnership with the **LIP6** and **Netatmo**, a company designing smart and connected products for the house. My current research focuses on neural network compression, pruning and sparsity in general.
-
 
 # Publication and Academia
 
@@ -69,7 +67,6 @@ I built algorithms for automatic extraction and analysis of social networks take
 {{< button href=/pdf/social-technological-networks-s1579039.pdf target="_blank" >}} 
 PDF 
 {{</button >}}
-
 
 # Miscellaneous
 

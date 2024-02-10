@@ -2,6 +2,7 @@
 title: 💾 DIY Cloud backup
 date: 2022-10-09
 draft: false
+layout: simple
 ---
 
 Did you know that [World Backup Day](https://www.worldbackupday.com/) is on the 31rst of March? Heck, did you even know there was a **World Backup Day**? Indeed backing up your data is important, but what to do?  Starting by having a remote copy of your most important data on services like Google Drive, Dropbox, Onedrive, etc... is a good start! But what if you want to do it **yourself**? Maybe because you want **better control over your data**, or maybe because you do not want [Google to shut down your account because of what you have on your Google Drive](https://www.nytimes.com/2022/08/21/technology/google-surveillance-toddler-photo.html)? Or maybe you just want to do it yourself because you can. In any case, the  general rule of thumb for backing up data is to follow the **3-2-1** rule:
