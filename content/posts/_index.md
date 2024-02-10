@@ -1,4 +1,1 @@
-# index des posts
-smqdf qsdf
-sdf
-qsdf
+## About some stuff I like to tinker with.

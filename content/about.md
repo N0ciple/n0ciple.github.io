@@ -10,10 +10,20 @@ I graduated from **École des Mines de Saint-Etienne** and **Imperial College Lo
 
 I worked at **Air France Operational Research** from 2018 to 2019, doing predictive maintenance on the A380 and A320 fleets.
 
-In 2019 I started a PhD under the supervision of [Hichem Sahbi](http://www-ia.lip6.fr/~sahbi/) at **Sorbonne University**, in the MLIA team of the LIP6. This PhD is realized in partnership with the **LIP6** and **Netatmo**, a company designing smart and connected products for the house. My current research focuses on neural network compression, pruning and sparsity in general.
+In december 2023 I defended my PhD, supervised by [Hichem Sahbi](http://www-ia.lip6.fr/~sahbi/) at **Sorbonne University**, in the MLIA and then SYEL team of the LIP6. This PhD is realized in partnership with the **LIP6** and **Netatmo**, a company designing smart and connected products for the house. My current research focuses on neural network compression, pruning and sparsity in general.
 
-# Publication and Accademia
-**Extracting Effective Subnetworks with Gumbel-Softmax** - ICIP 2022, Oral session
+# Publication and Academia
+
+**PhD Manuscript** – Sorbonne Université, 12/2023<br/>
+Deep Neural Network Compression for Visual Recognition.<br/>
+{{< button href=/pdf/Dupont_Robin_PhD_Manuscript.pdf target="_blank" >}} 
+PDF 
+{{</button >}}
+{{< button href="https://docs.google.com/presentation/d/1yeAhyvmI_dWIUbGzwkHpGpCrB6-cWmF22low8XLZvBs/edit?usp=sharing" target="_blank" >}} 
+SLIDES (🇫🇷)
+{{</button >}}
+
+**Extracting Effective Subnetworks with Gumbel-Softmax** - ICIP 2022, Oral<br/>
 *Robin Dupont, Mohammed Amine Alaoui, Hichem Sahbi, Alice Lebois*<br/>
 {{< button href="https://arxiv.org/abs/2202.12986" target="_blank" >}}
 ARXIV
@@ -28,9 +38,7 @@ POSTER
 VIDEO
 {{< /button >}}
 
-
-
-**Weight Reparametrization for Budget-Aware Network Pruning** - ICIP 2021
+**Weight Reparametrization for Budget-Aware Network Pruning** - ICIP 2021<br/>
 *Robin Dupont, Hichem Sahbi, Guillaume Michel*<br/>
 {{< button href="https://arxiv.org/abs/2107.03909" target="_blank" >}}
 ARXIV
@@ -45,6 +53,21 @@ POSTER
 VIDEO
 {{< /button >}}
 
+**Master Thesis** - Imperial College London, 2017<br/>
+I studied rumours propagation in social networks and social graph by modelling rumour spreading and creating a
+maximum likelihood detection algorithm for rumour sources. This master thesis was made under the supervision of Prof. Pier Luigi Dragotti.<br/>
+{{< button href=/pdf/Dupont_Robin_Master_Thesis.pdf target="_blank" >}} 
+PDF 
+{{</button >}}
+{{< button href=/pdf/Dupont_Robin_Poster.pdf target="_blank" >}} 
+POSTER 
+{{</button >}}
+
+**Social Network Analysis Project** - University of Edinburgh, 2015 <br/>
+I built algorithms for automatic extraction and analysis of social networks taken from literary masterpieces. <br/>
+{{< button href=/pdf/social-technological-networks-s1579039.pdf target="_blank" >}} 
+PDF 
+{{</button >}}
 
 
 # Miscellaneous
