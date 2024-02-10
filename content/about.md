@@ -19,7 +19,7 @@ In december 2023 I defended my PhD, supervised by [Hichem Sahbi](http://www-ia.l
 Deep Neural Network Compression for Visual Recognition.<br/>
 {{< button href=/pdf/Dupont_Robin_PhD_Manuscript.pdf target="_blank" >}} 
 PDF 
-{{</button >}}<span class="px-1"></span>
+{{</button >}}<span class="pr-1"></span>
 {{< button href="https://docs.google.com/presentation/d/1yeAhyvmI_dWIUbGzwkHpGpCrB6-cWmF22low8XLZvBs/edit?usp=sharing" target="_blank" >}} 
 SLIDES (🇫🇷)
 {{</button >}}
@@ -28,13 +28,13 @@ SLIDES (🇫🇷)
 *Robin Dupont, Mohammed Amine Alaoui, Hichem Sahbi, Alice Lebois*<br/>
 {{< button href="https://arxiv.org/abs/2202.12986" target="_blank" >}}
 ARXIV
-{{< /button >}}<span class="px-1"></span>
+{{< /button >}}<span class="pr-1"></span>
 {{< button href="/pdf/dupont_slides_icip_2022.pdf" target="_blank" >}}
 SLIDES
-{{< /button >}}<span class="px-1"></span>
+{{< /button >}}<span class="pr-1"></span>
 {{< button href="/pdf/dupont_poster_icip_2022.pdf" target="_blank" >}}
 POSTER
-{{< /button >}}<span class="px-1"></span>
+{{< /button >}}<span class="pr-1"></span>
 {{< button href="https://youtu.be/8hwW-ijQnPI" target="_blank" >}}
 VIDEO
 {{< /button >}}
@@ -43,13 +43,13 @@ VIDEO
 *Robin Dupont, Hichem Sahbi, Guillaume Michel*<br/>
 {{< button href="https://arxiv.org/abs/2107.03909" target="_blank" >}}
 ARXIV
-{{< /button >}}<span class="px-1"></span>
+{{< /button >}}<span class="pr-1"></span>
 {{< button href="/pdf/dupont_slides_icip_2021.pdf" target="_blank" >}}
 SLIDES
-{{< /button >}}<span class="px-1"></span>
+{{< /button >}}<span class="pr-1"></span>
 {{< button href="/pdf/dupont_poster_icip_2021.pdf" target="_blank" >}}
 POSTER
-{{< /button >}}<span class="px-1"></span>
+{{< /button >}}<span class="pr-1"></span>
 {{< button href="https://youtu.be/mfny00pmC_0" target="_blank" >}}
 VIDEO
 {{< /button >}}
@@ -59,7 +59,7 @@ I studied rumours propagation in social networks and social graph by modelling r
 maximum likelihood detection algorithm for rumour sources. This master thesis was made under the supervision of Prof. Pier Luigi Dragotti.<br/>
 {{< button href=/pdf/Dupont_Robin_Master_Thesis.pdf target="_blank" >}} 
 PDF 
-{{</button >}}<span class="px-1"></span>
+{{</button >}}<span class="pr-1"></span>
 {{< button href=/pdf/Dupont_Robin_Poster.pdf target="_blank" >}} 
 POSTER 
 {{</button >}}
