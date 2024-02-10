@@ -1,38 +1,39 @@
-<div class="h-full flex items-center justify-center">
-  <div class="max-w-4xl w-full mx-auto flex">
-    <!-- Profile Section - 1/3 of the container width -->
-    <div class="w-1/3 flex flex-col flex-grow items-center justify-center px-6">
-      <header class="flex flex-col items-center">
-        {{ $lazy := .Params.enableImageLazyLoading | default
-        .Site.Params.enableImageLazyLoading | default true }} {{ $altText :=
-        ($.Site.Language.Params.Author.name | default "Author") }} {{ with
-        .Site.Language.Params.Author.image }} {{ $authorImage := resources.Get .
-        }} {{ if $authorImage }}
-        <!-- Center the image with Tailwind's mx-auto class -->
-        <div class="mb-2 mx-auto">
-          {{ partial "picture.html" (dict "img" $authorImage "alt" $altText
-          "class" "h-auto w-36 rounded-full" "lazy" $lazy) }}
-        </div>
-        {{ end }} {{ end }}
-        <h1 class="text-4xl font-extrabold">
-          {{ .Site.Language.Params.Author.name | default .Site.Title }}
-        </h1>
-        {{ with .Site.Language.Params.Author.headline }}
-        <h2 class="text-xl text-neutral-500 dark:text-neutral-400">
-          {{ . | markdownify | emojify }}
-        </h2>
-        {{ end }}
-        <div class="mt-1 text-2xl">
-          {{ partialCached "author-links.html" . }}
-        </div>
-      </header>
-    </div>
-
-    <!-- Text Section - 2/3 of the container width -->
-    <div class="w-2/3 px-6">
-      <section class="prose dark:prose-dark mx-auto">
-        {{ .Content | emojify }}
-      </section>
+<div class="h-full flex items-center justify-center dark:text-neutral">
+    <div class="max-w-4xl w-full mx-auto flex flex-col">
+      <!-- Profile Section - Full width -->
+      <div class="w-full flex flex-col flex-grow items-center justify-center px-6 py-10">
+        <header class="flex flex-col items-center">
+          {{ $lazy := .Params.enableImageLazyLoading | default .Site.Params.enableImageLazyLoading | default true }}
+          {{ $altText := ($.Site.Language.Params.Author.name | default "Author") }}
+          {{ with .Site.Language.Params.Author.image }}
+            {{ $authorImage := resources.Get . }}
+            {{ if $authorImage }}
+              <!-- Center the image with Tailwind's mx-auto class -->
+              <div class="mb-2 mx-auto">
+                {{ partial "picture.html" (dict "img" $authorImage "alt" $altText "class" "h-auto w-36 rounded-full" "lazy" $lazy) }}
+              </div>
+            {{ end }}
+          {{ end }}
+          <h1 class="text-4xl font-extrabold">
+            {{ .Site.Language.Params.Author.name | default .Site.Title }}
+          </h1>
+          {{ with .Site.Language.Params.Author.headline }}
+            <h2 class="text-xl text-neutral-500 dark:text-neutral-400">
+              {{ . | markdownify | emojify }}
+            </h2>
+          {{ end }}
+          <div class="mt-1 text-2xl">
+            {{ partialCached "author-links.html" . }}
+          </div>
+        </header>
+      </div>
+  
+      <!-- Text Section - Full width -->
+      <div class="w-full px-6">
+        <section class="prose dark:prose-invert mx-auto">
+          {{ .Content | emojify }}
+        </section>
+      </div>
     </div>
   </div>
-</div>
+  
