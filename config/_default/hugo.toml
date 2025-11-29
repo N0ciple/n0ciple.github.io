@@ -1,0 +1,17 @@
+# -- Site Configuration --
+# Refer to the theme docs for more details about each of these parameters.
+# https://jpanther.github.io/congo/docs/getting-started/
+
+baseURL = "https://robin.dupont.onl/"
+defaultContentLanguage = "en"
+
+enableRobotsTXT = true
+pagination.pagerSize = 10
+summaryLength = 0
+
+timeout = "60s"
+
+googleAnalytics = "G-BDM1DTDEWF"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
